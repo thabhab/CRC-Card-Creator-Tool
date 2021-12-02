@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+        <script src="scripts.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+        <title>CRC Card Creator</title>
+        <link rel="shortcut icon" href="favicon.ico">
+    </head>
+
+    <body>
+        <header>
+            <h1 class="title">CRC Card Creator</h1>
+            
+        </header>
+        
+        <main>
+            <div class="card-list">
+                <div class="card">
+                    <div class="card-name">
+                        <input type="text" placeholder="Class Name" required>
+                        <button class="delete" onclick="deleteCard(this)">X</button>
+                    </div>
+                    
+                    <div class="responsibilities">
+                        <textarea cols="30" rows="10" required placeholder="Responsibilities"></textarea>
+                        
+                    </div>
+                    
+                    <div class="collaborators">
+                        <textarea cols="30" rows="10" placeholder="Collaborators"></textarea>
+                        
+                            
+                    </div>
+    
+                </div>
+                
+            </div>
+            
+
+            <div class="button-wrapper">
+                <button class="add" onclick="addCard()">Add</button>
+                <button class="print" onclick="window.print();">Print</button>
+            </div>
+            
+            <h2>Instructions</h2>
+            <p>What are Class Responsibility Control Models? CRC card models are a tool software engineers use to help them brainstorm a object oriented software. Each card represents a class in the program, as well as its responsibilities and collaborators to give you a visual on what cards interact with what, and what roles they fulfill. Using our website you can easily create CRC cards and save them. But how does it work?</p>
+
+            <ul>
+                <li><strong>Adding</strong> - the add button allows you to create a new card if you would like to make more CRC cards.</li>
+                <li><strong>Printing</strong> - the print button allows you to print all of the cards on the webpage, with their information included.</li>
+                <li><strong>Deleting</strong> - the 'X' button at the top right of every card, will delete the card as a whole. You can only do this if you have more than one card. If you need to reset your first card, you can click "Add" then delete the first card, or simply delete all of the text you wrote in the boxes of the first box.</li>
+                <li><strong>Class Name</strong> is the name of the CRC card. This lets the user know which class the responsibilities and collaborators belong to.</li>
+                <li><strong>Responsibilities</strong> are the operations the class can do. These are all the functions the class fulfills</li>
+                <li><strong>Collaborators</strong> are the classes this card works with to fulfill its operations. These are typically parent classes of the function. </li>
+
+            </ul>
+            
+        </main>
+
+        <!-- <footer>
+            
+            &copy; 2021 University of Michigan - Dearborn  
+        </footer> -->
+    </body>
+
+</html>

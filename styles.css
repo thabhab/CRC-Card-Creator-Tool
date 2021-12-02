@@ -1,0 +1,214 @@
+* {
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+header {
+    background-color: #00274c;
+    color: white;
+    text-align: center;
+    padding: 20px 0px;
+    margin-bottom: 30px;
+
+}
+.title::after {
+    display: block;
+    content: '';
+    height: 2px;
+    width: 160px;
+    background-color: #ffcb05;
+    margin: 0 auto;
+}
+
+.card {
+    display: grid;   
+    grid-template-areas: 
+    "hd hd"
+    "l r";
+    padding: 0;
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 20px;
+    
+}
+.card-name {
+    width: 100%;
+    grid-area: hd;
+    border: 2px solid black;
+    border-bottom: none;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    padding: 10px;
+
+}
+.card input /*class name*/{
+    border: none;
+    outline: none;
+    width: 90%;
+    font-size: 20px;
+}
+.delete {
+    grid-area: hd;
+    float: right;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: right;
+    padding: 5px 10px;
+    justify-items: center;
+    align-items: center;
+    background-color: #ffcb05;
+    color: #00274c;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0px 2px 3px black;    transition: 0.1s ease;
+}
+.delete:hover {
+    background-color: #00274c;
+    color: white;
+
+}
+.responsibilities {
+    width: 100%;
+    grid-area: l;
+    border: 2px solid black;
+    border-bottom-left-radius: 6px;
+    border-right: none;
+    padding: 10px;
+
+
+}
+.collaborators {
+    grid-area: r;
+    width: 100%;
+    border: 2px solid black;
+    border-bottom-right-radius: 6px;
+    padding: 10px;
+
+}
+
+.responsibilities textarea {
+    resize: none;
+    border: none;
+    outline: none;
+
+}
+.collaborators textarea{
+    resize: none;
+    border: none;
+    outline: none;
+    
+}
+
+
+.button-wrapper {
+    display: flex;
+    padding-top: 20px;
+    width: 60%;
+    
+}
+.add {
+    padding: 8px 20px;
+    cursor: pointer;
+    background-color: #ffcb05;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0px 2px 4px black;
+    font-size: 14px;
+    transition: 0.1s ease;
+    font-weight: bold;
+    width: 30%;
+
+}
+.add:hover {
+    background-color: #00274c;
+    color: white;
+
+}
+.print {
+    padding: 8px 20px;
+    cursor: pointer;
+    background-color: #ffcb05;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0px 2px 4px black;
+    font-size: 14px;
+    transition: 0.2s ease;
+    font-weight: bold;
+    width: 30%;
+
+}
+.print:hover {
+    background-color: #00274c;
+    color: white;
+
+}
+
+main h2 {
+    text-align: center;
+    margin-top: 45px;
+    padding: 20px;
+}
+main h2::after {
+    display: block;
+    content: '';
+    height: 2px;
+    width: 70px;
+    background-color: #00274c;
+    margin: 0 auto;
+}
+main p {
+    padding-bottom: 20px;
+    font-weight: 600;
+    width: 60%;
+}
+main ul {
+    display: block;
+    margin: 0 auto;
+    align-self: center;
+    width: 60%;
+    list-style: square;
+}
+main ul li {
+    padding-top: 8px;
+
+
+}
+footer {
+    background-color: #00274c;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    margin-top: 50px;
+    
+}
+
+@media print{ 
+    
+    header {
+        visibility: hidden;
+    }
+    .delete {
+        visibility: hidden;
+    }
+    .button-wrapper {
+        visibility: hidden;
+    }
+    main h2 {
+        visibility: hidden;
+    }
+    main p {
+        visibility: hidden;
+    }
+    main ul {
+        visibility: hidden;
+    }
+    .card {
+        visibility: visible;
+        left: 0%;
+        top: 0%;
+    }
+    footer {
+        visibility: hidden;
+    }
+}
